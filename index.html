@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schweiz Ferienplaner</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏔️ Schweiz Ferienplaner</h1>
+            <div class="controls">
+                <button id="add-planned" class="btn btn-planned">📍 Geplanten Ort hinzufügen</button>
+                <button id="add-visited" class="btn btn-visited">✅ Besuchten Ort hinzufügen</button>
+                <button id="clear-all" class="btn btn-danger">🗑️ Alle löschen</button>
+            </div>
+        </header>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-marker planned"></span>
+                <span>Geplante Orte</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-marker visited"></span>
+                <span>Besuchte Orte</span>
+            </div>
+        </div>
+
+        <div id="map"></div>
+        
+        <div class="sidebar">
+            <h3>Meine Orte</h3>
+            <div id="places-list"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
