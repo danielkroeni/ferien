@@ -31,16 +31,49 @@ header {
     padding: 15px 20px;
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
 h1 {
     color: #2c3e50;
     font-size: 24px;
     font-weight: 700;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 5px;
+}
+
+.language-btn {
+    padding: 6px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+    border-color: #3498db;
+    color: #3498db;
+    transform: translateY(-1px);
+}
+
+.language-btn.active {
+    border-color: #3498db;
+    background: #3498db;
+    color: white;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
 }
 
 .controls {
@@ -272,9 +305,14 @@ body.add-mode #map {
         grid-template-rows: auto auto 400px 1fr;
     }
     
-    header {
+    .header-top {
         flex-direction: column;
         gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .language-switcher {
+        order: -1;
     }
     
     .controls {
